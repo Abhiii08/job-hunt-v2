@@ -15,13 +15,26 @@
 </head>
 <body>
   <div class="container">
-    <h2 class="text-center mt-2 mb-3">Dynamic Careers</h2>
+    <h2 class="text-center mt-2 mb-3 heading">Dynamic Careers</h2>
     <img src="/static/banner.jpg" class="img-fluid" id="banner">
-    <h3 class="text-center mt-2 mb-3">About Dynamic Careers</h3>
+    <h3 class="text-center mt-2 mb-3 heading">About Dynamic Careers</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed         do eiusmod tempor incididunt ut labore et dolore</p>
-    <h3 class="text-center mt-2 mb-3">Open Positions</h3>
-    <p>TODO - Show the jobs here</p>
-    <div class="text-center mt-2 mb-3">
+    <h3 class="text-center mt-2 mb-3 heading">Open Positions</h3>
+    <div>
+      {% for job in jobs%}
+        <div>
+          <h4 style="color:royalblue; font-weight:normal;">      
+          {{job['title']}}</h4>
+        </div>
+        <div style="margin-bottom:3px;">
+          <b>Location: </b>{{job['location']}}
+        </div>
+        <div style="margin-bottom:16px;">
+          <b >Salary: </b>{{job['salary']}}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mb-3 heading">
       <button class="btn btn-primary">Contact Us</button>
     </div>
   </div>
