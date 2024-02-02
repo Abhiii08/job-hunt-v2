@@ -13,19 +13,20 @@
       }
       #Para{
         text-align: center;
+        font-size: 17px;
+        font-style: italic;
       }
     </style>
 </head>
 <body>
   {% include 'navbar.html' %}
+  <img src="/static/banner.jpg" class="img-fluid" id="banner">
   <div class="container">
-    <h2 class="text-center mt-3 mb-3 heading">Dynamic Careers</h2>
-    <img src="/static/banner.jpg" class="img-fluid" id="banner">
-    <h3 class="text-center mt-3 mb-3 heading">About Dynamic Careers</h3>
-    <div id="Para">
+    <h2 class="text-center mt-4 mb-3 heading">Dynamic Careers</h2>
+    <div id="Para" class="mb-2">
       <p>We help you find the job you desire. Your dreams are our responsibility.</p>
     </div>
-    <h3 class="text-center mt-3 mb-3 heading">Open Positions</h3>
+    <h3 class="text-center mt-5 mb-3 heading">Open Positions</h3>
     <div>
       {% for job in jobs%}
         {% include 'job-item.html' %}
@@ -33,7 +34,7 @@
     </div>
     <div class="text-center mb-3 heading" style="margin-top:14px; 
       margin-bottom:8px;">
-      <button class="btn btn-primary">Contact Us</button>
+      <a class="btn btn-primary" href="mailto:hello@dynamic.ai?subject=Question%20about%20Dynamic.&body=My%20name%3A%20%3CEnter%20your%20full%20name%3E%0D%0A%0D%0AMy%20question%3A%20%3CEnter%20your%20question%20or%20suggestion%3E">Contact Us</a>
     </div>
   </div>
   {% include 'footer.html' %}  
