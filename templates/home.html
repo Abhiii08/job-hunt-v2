@@ -19,13 +19,13 @@
 <body>
   {% include 'navbar.html' %}
   <div class="container">
-    <h2 class="text-center mt-2 mb-3 heading">Dynamic Careers</h2>
+    <h2 class="text-center mt-3 mb-3 heading">Dynamic Careers</h2>
     <img src="/static/banner.jpg" class="img-fluid" id="banner">
-    <h3 class="text-center mt-2 mb-3 heading">About Dynamic Careers</h3>
+    <h3 class="text-center mt-3 mb-3 heading">About Dynamic Careers</h3>
     <div id="Para">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed               do eiusmod tempor incididunt ut labore et dolore</p>
+      <p>We help you find the job you desire. Your dreams are our responsibility.</p>
     </div>
-    <h3 class="text-center mt-2 mb-3 heading">Open Positions</h3>
+    <h3 class="text-center mt-3 mb-3 heading">Open Positions</h3>
     <div>
       {% for job in jobs%}
         {% include 'job-item.html' %}
@@ -36,5 +36,6 @@
       <button class="btn btn-primary">Contact Us</button>
     </div>
   </div>
+  {% include 'footer.html' %}  
 </body>
 </html>
